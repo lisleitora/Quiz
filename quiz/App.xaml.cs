@@ -10,7 +10,7 @@ namespace quiz
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Pages.QuizPage();
         }
 
         protected override void OnStart()
