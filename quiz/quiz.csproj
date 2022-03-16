@@ -13,10 +13,12 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="MarcTron.Admob" Version="1.6.9" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Pages\" />
     <None Remove="Views\" />
+    <None Remove="MarcTron.Admob" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />

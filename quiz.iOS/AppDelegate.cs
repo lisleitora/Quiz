@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Google.MobileAds;
 using Foundation;
 using UIKit;
 
@@ -23,9 +23,12 @@ namespace quiz.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            MobileAds.SharedInstance.Start(CompletionHandler);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
+
+        private void CompletionHandler(InitializationStatus status) { }
     }
 }
