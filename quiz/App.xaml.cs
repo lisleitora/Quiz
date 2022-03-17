@@ -8,6 +8,7 @@ namespace quiz
     {
         public App()
         {
+            //App.Current.UserAppTheme = OSAppTheme.Dark;
             InitializeComponent();
 
             MainPage = new Pages.StartPage();

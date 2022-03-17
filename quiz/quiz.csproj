@@ -19,9 +19,11 @@
     <None Remove="Pages\" />
     <None Remove="Views\" />
     <None Remove="MarcTron.Admob" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
     <Folder Include="Views\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

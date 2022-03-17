@@ -1,8 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="quiz.App">
+<Application
+    x:Class="quiz.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
+        <!--  Light colors  -->
+        <Color x:Key="PrimaryLight">#333333</Color>
+        <Color x:Key="SecondaryLight">#ffffff</Color>
+        <Color x:Key="BttBackgroundLight">#2e4670</Color>
+        <Color x:Key="BttBorderLight">#1e2975</Color>
+        <Color x:Key="BttTextLight">#ffffff</Color>
+
+        <!--  Dark colors  -->
+        <Color x:Key="PrimaryDark">#cccccc</Color>
+        <Color x:Key="SecondaryDark">#333333</Color>
+        <Color x:Key="BttBackgroundDark">#1f1f1f</Color>
+        <Color x:Key="BttBorderDark">#b0b0b0</Color>
+        <Color x:Key="BttTextDark">#cccccc</Color>
+
+        <Style Class="Background" TargetType="Grid">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource SecondaryDark}, Light={StaticResource SecondaryLight}}" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource PrimaryDark}, Light={StaticResource PrimaryLight}}" />
+        </Style>
+
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource SecondaryDark}, Light={StaticResource SecondaryLight}}" />
+        </Style>
 
     </Application.Resources>
 </Application>

@@ -38,5 +38,7 @@
 	<string>YOUR APP ID</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
+    <!-- <key>UIUserInterfaceStyle</key>
+ <string>Light</string> -->
 </dict>
 </plist>
