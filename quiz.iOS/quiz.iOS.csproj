@@ -138,5 +138,10 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\logogrifindor.png" />
+    <BundleResource Include="Resources\logoslytherin.png" />
+    <BundleResource Include="Resources\logohufflepuff.png" />
+    <BundleResource Include="Resources\logoravenclaw.png" />
+    <BundleResource Include="Resources\logogrifindor2.png" />
   </ItemGroup>
 </Project>
