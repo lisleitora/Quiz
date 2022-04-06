@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="quiz.Pages.EndPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:quiz.Views">
+    <ContentPage.Content>
+        <Grid StyleClass="Background">
+            <Grid Margin="20,70" RowDefinitions="50,*">
+                <views:AdMobView />
+                <StackLayout
+                    Grid.Row="1"
+                    Orientation="Vertical"
+                    Spacing="20"
+                    VerticalOptions="Center">
+                    <Image
+                        x:Name="LogoImage"
+                        Margin="20"
+                        Source="logo.png" />
+                    <Label
+                        x:Name="TitleLabel"
+                        FontSize="40"
+                        HorizontalTextAlignment="Center"
+                        Text="Voce e de lalala" />
+
+                    <Label
+                        x:Name="DefinitionLabel"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="O seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu" />
+                    <views:ButtonView
+                        x:Name="BackButton"
+                        Clicked="ButtonView_Clicked"
+                        Text="Voltar" />
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

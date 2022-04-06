@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="quiz.Pages.QuizPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:quiz.Views">
+
+    <ContentPage.Content>
+        <Grid StyleClass="Background">
+            <Grid Margin="20,70" RowDefinitions="50,.2*,*">
+                <views:AdMobView />
+                <Grid Grid.Row="1" ColumnDefinitions=".35*,.30*,.35*">
+                    <views:ButtonView
+                        x:Name="ButtonLeft"
+                        Grid.Column="0"
+                        Clicked="ButtonView_Left"
+                        FontSize="40"
+                        Text="◄" />
+                    <Label
+                        x:Name="NumberBar"
+                        Grid.Column="1"
+                        FontSize="40"
+                        HorizontalOptions="Center"
+                        Text="9/15"
+                        VerticalOptions="Center" />
+                    <views:ButtonView
+                        x:Name="ButtonRight"
+                        Grid.Column="2"
+                        Clicked="ButtonView_Right"
+                        FontSize="40"
+                        Text="►" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="2"
+                    Spacing=" 20"
+                    VerticalOptions="Center">
+
+                    <Frame HorizontalOptions="Center" VerticalOptions="Start">
+
+                        <Label
+                            x:Name="AskLabel"
+                            FontSize="30"
+                            HorizontalTextAlignment="Center"
+                            Text="Qual destas cores voce tem mais afeição e deixa voce mais feliz e alegre com voce mesmo ? Bastante atenção na escolha." />
+                    </Frame>
+                    <ScrollView>
+                        <StackLayout x:Name="AnswersStack" />
+                    </ScrollView>
+
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

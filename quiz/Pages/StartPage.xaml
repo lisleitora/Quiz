@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="quiz.Pages.StartPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:quiz.Views">
+    <ContentPage.Content>
+        <Grid StyleClass="Background">
+            <Grid Margin="20,70" RowDefinitions="50,*">
+                <views:AdMobView />
+                <StackLayout
+                    Grid.Row="1"
+                    Orientation="Vertical"
+                    Spacing="20"
+                    VerticalOptions="Center">
+                    <Image x:Name="StartLogo" Source="logo.png" />
+                    <Label
+                        x:Name="StartText"
+                        FontSize="40"
+                        HorizontalTextAlignment="Center"
+                        Text="Este e o quiz da Lis" />
+                    <views:ButtonView
+                        x:Name="StartButton"
+                        Clicked="OnClicked"
+                        Text="Iniciar" />
+                    <Label
+                        x:Name="DesText"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="O seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu" />
+
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
