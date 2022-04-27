@@ -38,7 +38,7 @@ namespace quiz.Pages
         }
         async void ButtonView_Clicked(System.Object sender, System.EventArgs e)
         {
-            await BackButton.FadeTo(0, 500);
+             BackButton.FadeTo(0, 500);
             await DefinitionLabel.FadeTo(0, 500);
             await TitleLabel.FadeTo(0, 500);
             await LogoImage.FadeTo(0, 800);

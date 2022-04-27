@@ -35,7 +35,10 @@
                     Spacing=" 20"
                     VerticalOptions="Center">
 
-                    <Frame HorizontalOptions="Center" VerticalOptions="Start">
+                    <Frame
+                        x:Name="AskFrame"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start">
 
                         <Label
                             x:Name="AskLabel"

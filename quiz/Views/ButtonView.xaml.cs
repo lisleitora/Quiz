@@ -55,8 +55,13 @@ namespace quiz.Views
             InitializeComponent();
         }
 
-        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
+       async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
+            await this.ScaleTo(1.2, 100);
+
+            await this.ScaleTo(0.7, 100);
+           await this.ScaleTo(1, 100);
+
             if (CallBack!=null) CallBack.Execute(null);
         }
 

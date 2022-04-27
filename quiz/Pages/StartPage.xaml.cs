@@ -26,7 +26,7 @@ namespace quiz.Pages
       async void OnClicked(object sender, EventArgs args)
         {
             
-            await StartButton.FadeTo(0, 500);
+             StartButton.FadeTo(0, 500);
             await DesText.FadeTo(0, 500);
             await StartText.FadeTo(0, 500);
             await StartLogo.FadeTo(0, 800);
