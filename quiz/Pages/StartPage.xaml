@@ -8,28 +8,30 @@
         <Grid StyleClass="Background">
             <Grid Margin="20,70" RowDefinitions="50,*">
                 <views:AdMobView />
-                <StackLayout
-                    Grid.Row="1"
-                    Orientation="Vertical"
-                    Spacing="20"
-                    VerticalOptions="Center">
-                    <Image x:Name="StartLogo" Source="logo.png" />
-                    <Label
-                        x:Name="StartText"
-                        FontSize="40"
-                        HorizontalTextAlignment="Center"
-                        Text="Este e o quiz da Lis" />
-                    <views:ButtonView
-                        x:Name="StartButton"
-                        Clicked="OnClicked"
-                        Text="Iniciar" />
-                    <Label
-                        x:Name="DesText"
-                        FontSize="20"
-                        HorizontalTextAlignment="Center"
-                        Text="O seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu" />
+                <ScrollView Grid.Row="1">
 
-                </StackLayout>
+                    <FlexLayout
+                        Direction="Column"
+                        JustifyContent="SpaceAround"
+                        VerticalOptions="FillAndExpand">
+                        <Image x:Name="StartLogo" Source="logo.png" />
+                        <Label
+                            x:Name="StartText"
+                            FontSize="40"
+                            HorizontalTextAlignment="Center"
+                            Text="Este e o quiz da Lis" />
+                        <views:ButtonView
+                            x:Name="StartButton"
+                            Clicked="OnClicked"
+                            Text="Iniciar" />
+                        <Label
+                            x:Name="DesText"
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"
+                            Text="O seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu" />
+
+                    </FlexLayout>
+                </ScrollView>
 
             </Grid>
         </Grid>

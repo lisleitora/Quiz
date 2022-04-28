@@ -7,7 +7,10 @@ using Xamarin.Forms;
 namespace quiz.Pages
 {
     public partial class QuizPage : ContentPage
+
     {
+        bool isBusy;
+
         List<Card> cards;
         List<Result> results;
         int index = 0;
@@ -108,24 +111,35 @@ namespace quiz.Pages
        
        async void ButtonView_Left(System.Object sender, System.EventArgs e)
         {
+            if (isBusy)
+            {
+                return;
+            }
             if (index==0)
             {
                 return;
             }
+            isBusy = true;
             index = index - 1;
             PageChanger();
            // await ButtonLeft.ScaleTo(1.4, 100);
           
            //await ButtonLeft.ScaleTo(0.5, 180);
            // ButtonLeft.ScaleTo(1, 170);
+
         }
 
        async void ButtonView_Right(System.Object sender, System.EventArgs e)
         {
+            if (isBusy)
+            {
+                return;
+            }
             if (index == cards.Count-1)
             {
                 return;
             }
+            isBusy = true;
             index = index + 1;
             PageChanger();
             //await ButtonRight.ScaleTo(1.4, 100);
@@ -183,10 +197,16 @@ namespace quiz.Pages
                 await temp.ScaleTo(1.2, 200);
                 temp.ScaleTo(1, 200);
             }
+            isBusy = false;
         }
 
         void OnResult(List<int> values)
         {
+            if (isBusy)
+            {
+                return;
+            }
+            isBusy = true;
             var i = 0;
             foreach (var item in results)
             {
@@ -197,6 +217,7 @@ namespace quiz.Pages
             if (index == cards.Count - 1)
             {
                 App.Current.MainPage = new Pages.EndPage(results);
+                isBusy = false;
             }
             else
             {

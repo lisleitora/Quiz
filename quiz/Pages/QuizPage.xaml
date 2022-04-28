@@ -30,27 +30,30 @@
                         FontSize="40"
                         Text="►" />
                 </Grid>
-                <StackLayout
-                    Grid.Row="2"
-                    Spacing=" 20"
-                    VerticalOptions="Center">
+                <ScrollView Grid.Row="2">
+                    <FlexLayout
+                        Direction="Column"
+                        JustifyContent="SpaceAround"
+                        VerticalOptions="Center">
 
-                    <Frame
-                        x:Name="AskFrame"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Start">
+                        <Frame
+                            x:Name="AskFrame"
+                            Margin="4"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start">
 
-                        <Label
-                            x:Name="AskLabel"
-                            FontSize="30"
-                            HorizontalTextAlignment="Center"
-                            Text="Qual destas cores voce tem mais afeição e deixa voce mais feliz e alegre com voce mesmo ? Bastante atenção na escolha." />
-                    </Frame>
-                    <ScrollView>
+                            <Label
+                                x:Name="AskLabel"
+                                FontSize="30"
+                                HorizontalTextAlignment="Center"
+                                Text="Qual destas cores voce tem mais afeição e deixa voce mais feliz e alegre com voce mesmo ? Bastante atenção na escolha." />
+                        </Frame>
+
                         <StackLayout x:Name="AnswersStack" />
-                    </ScrollView>
 
-                </StackLayout>
+                    </FlexLayout>
+                </ScrollView>
+
             </Grid>
         </Grid>
     </ContentPage.Content>

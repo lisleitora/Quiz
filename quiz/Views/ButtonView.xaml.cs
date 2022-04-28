@@ -6,6 +6,7 @@ namespace quiz.Views
 {
     public partial class ButtonView : ContentView
     {
+        bool isBusy;
         public Command CallBack;
 
         public static readonly BindableProperty FontSizeProperty = BindableProperty.Create(
@@ -57,12 +58,18 @@ namespace quiz.Views
 
        async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
+            if (isBusy)
+            {
+                return;
+            }
+            isBusy = true;
             await this.ScaleTo(1.2, 100);
 
             await this.ScaleTo(0.7, 100);
            await this.ScaleTo(1, 100);
 
             if (CallBack!=null) CallBack.Execute(null);
+            isBusy = false;
         }
 
         public event EventHandler Clicked

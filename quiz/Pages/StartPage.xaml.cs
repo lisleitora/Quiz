@@ -7,6 +7,7 @@ namespace quiz.Pages
 {
     public partial class StartPage : ContentPage
     {
+
         bool isBusy;
 		
 		public StartPage()
@@ -25,12 +26,17 @@ namespace quiz.Pages
 
       async void OnClicked(object sender, EventArgs args)
         {
-            
-             StartButton.FadeTo(0, 500);
+            if (isBusy)
+            {
+                return;
+            }
+            isBusy = true;
+            StartButton.FadeTo(0, 500);
             await DesText.FadeTo(0, 500);
             await StartText.FadeTo(0, 500);
             await StartLogo.FadeTo(0, 800);
             App.Current.MainPage = new Pages.QuizPage();
+            isBusy = false;
         }
     }
 }

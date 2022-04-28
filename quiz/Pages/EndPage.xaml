@@ -8,31 +8,32 @@
         <Grid StyleClass="Background">
             <Grid Margin="20,70" RowDefinitions="50,*">
                 <views:AdMobView />
-                <StackLayout
-                    Grid.Row="1"
-                    Orientation="Vertical"
-                    Spacing="20"
-                    VerticalOptions="Center">
-                    <Image
-                        x:Name="LogoImage"
-                        Margin="20"
-                        Source="logo.png" />
-                    <Label
-                        x:Name="TitleLabel"
-                        FontSize="40"
-                        HorizontalTextAlignment="Center"
-                        Text="Voce e de lalala" />
+                <ScrollView Grid.Row="1">
+                    <FlexLayout
+                        Direction="Column"
+                        JustifyContent="SpaceAround"
+                        VerticalOptions="Center">
+                        <Image
+                            x:Name="LogoImage"
+                            Margin="20"
+                            Source="logo.png" />
+                        <Label
+                            x:Name="TitleLabel"
+                            FontSize="40"
+                            HorizontalTextAlignment="Center"
+                            Text="Voce e de lalala" />
 
-                    <Label
-                        x:Name="DefinitionLabel"
-                        FontSize="20"
-                        HorizontalTextAlignment="Center"
-                        Text="O seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu" />
-                    <views:ButtonView
-                        x:Name="BackButton"
-                        Clicked="ButtonView_Clicked"
-                        Text="Voltar" />
-                </StackLayout>
+                        <Label
+                            x:Name="DefinitionLabel"
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"
+                            Text="O seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu" />
+                        <views:ButtonView
+                            x:Name="BackButton"
+                            Clicked="ButtonView_Clicked"
+                            Text="Voltar" />
+                    </FlexLayout>
+                </ScrollView>
 
             </Grid>
         </Grid>

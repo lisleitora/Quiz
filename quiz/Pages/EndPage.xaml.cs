@@ -9,6 +9,8 @@ namespace quiz.Pages
 {
     public partial class EndPage : ContentPage
     {
+        bool isBusy;
+
         List<Result> results;
 
         public EndPage(List<Result> _results)
@@ -38,11 +40,18 @@ namespace quiz.Pages
         }
         async void ButtonView_Clicked(System.Object sender, System.EventArgs e)
         {
+            if (isBusy)
+            {
+                return;
+
+            }
+            isBusy = true;
              BackButton.FadeTo(0, 500);
             await DefinitionLabel.FadeTo(0, 500);
             await TitleLabel.FadeTo(0, 500);
             await LogoImage.FadeTo(0, 800);
             App.Current.MainPage = new Pages.StartPage();
+            isBusy = false;
         }
     }
 }
