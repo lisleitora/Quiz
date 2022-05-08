@@ -19,7 +19,8 @@ namespace quiz.Pages
             InitializeComponent();
             var item = results.OrderByDescending(x => x.Value).FirstOrDefault();
             LogoImage.Source = item.Logo;
-            TitleLabel.Text = item.Name +" - "+ item.Value.ToString();
+            //TitleLabel.Text = item.Name +" - "+ item.Value.ToString();
+            TitleLabel.Text = item.Name;
             DefinitionLabel.Text = item.Definitions;
             LogoImage.Opacity = 0;
             DefinitionLabel.Opacity = 0;

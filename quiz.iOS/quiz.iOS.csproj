@@ -135,6 +135,9 @@
       <Project>{334C486C-CF76-4F4B-9766-5F714C7929FB}</Project>
       <Name>quiz</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\mylibraries\PhpRunnerService\PhpRunnerService\PhpRunnerService.csproj">
+      <Name>PhpRunnerService</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logo.png" />

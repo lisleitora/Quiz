@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quiz.iOS", "quiz.iOS\quiz.i
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quiz", "quiz\quiz.csproj", "{334C486C-CF76-4F4B-9766-5F714C7929FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhpRunnerService", "..\mylibraries\PhpRunnerService\PhpRunnerService\PhpRunnerService.csproj", "{25E1BB85-2131-4DBF-A334-E1456A41381A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{334C486C-CF76-4F4B-9766-5F714C7929FB}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{334C486C-CF76-4F4B-9766-5F714C7929FB}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{334C486C-CF76-4F4B-9766-5F714C7929FB}.Release|iPhone.Build.0 = Release|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{25E1BB85-2131-4DBF-A334-E1456A41381A}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

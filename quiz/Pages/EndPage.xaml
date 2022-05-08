@@ -6,7 +6,7 @@
     xmlns:views="clr-namespace:quiz.Views">
     <ContentPage.Content>
         <Grid StyleClass="Background">
-            <Grid Margin="20,70" RowDefinitions="50,*">
+            <Grid Margin="20,70" RowDefinitions="70,*">
                 <views:AdMobView />
                 <ScrollView Grid.Row="1">
                     <FlexLayout

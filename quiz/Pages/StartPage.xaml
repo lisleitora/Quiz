@@ -6,7 +6,19 @@
     xmlns:views="clr-namespace:quiz.Views">
     <ContentPage.Content>
         <Grid StyleClass="Background">
-            <Grid Margin="20,70" RowDefinitions="50,*">
+            <Grid x:Name="loading" BackgroundColor="White">
+                <ActivityIndicator
+                    HeightRequest="30"
+                    HorizontalOptions="Center"
+                    IsRunning="True"
+                    VerticalOptions="Center"
+                    WidthRequest="30"
+                    Color="Gray" />
+            </Grid>
+            <Grid
+                x:Name="content"
+                Margin="20,70"
+                RowDefinitions="70,*">
                 <views:AdMobView />
                 <ScrollView Grid.Row="1">
 
@@ -14,7 +26,7 @@
                         Direction="Column"
                         JustifyContent="SpaceAround"
                         VerticalOptions="FillAndExpand">
-                        <Image x:Name="StartLogo" Source="logo.png" />
+                        <Image x:Name="StartLogo" />
                         <Label
                             x:Name="StartText"
                             FontSize="40"

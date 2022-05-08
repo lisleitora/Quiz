@@ -6,6 +6,7 @@ namespace quiz.Models
     public class Card
     {
        public string Ask;
-        public List<Answer> Answers;
+       public List<Answer> Answers;
+        public bool IsAnswered;
     }
 }

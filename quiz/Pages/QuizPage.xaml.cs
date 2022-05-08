@@ -10,106 +10,27 @@ namespace quiz.Pages
 
     {
         bool isBusy;
-
+        
         List<Card> cards;
         List<Result> results;
         int index = 0;
 
-        public QuizPage()
+        public QuizPage(List<Card> _cards, List<Result> _results)
         {
             InitializeComponent();
 
-            results = new List<Result>();
-            results.Add(new Result { Name = "Grifindor", Value = 0,Definitions="texto4",Logo = "logogrifindor2.png" });
-            results.Add(new Result { Name = "Slytherin", Value = 0,Definitions="texto3", Logo = "logoslytherin.png" });
-            results.Add(new Result { Name = "Hufflepuff", Value = 0, Definitions ="texto2", Logo = "logohufflepuff.png" });
-            results.Add(new Result { Name = "Ravenclaw", Value = 0, Definitions ="texto1", Logo = "logoravenclaw.png" });
+            cards = _cards;
+            results = _results;
+            
+        }
 
-            cards = new List<Card>();
-            cards.Add(new Card {
-                Ask="Se você achar um dinheiro no chão, você...",
-                Answers = new List<Answer>()
-                {
-                    new Answer
-                    {
-                        Text = "Tentaria achar o dono !",
-                        Values = new List<int>{10,0,0,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Tentaria pegar ele bem disfarçadamente.",
-                        Values = new List<int>{0,10,0,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Compraria um monte de doçes",
-                        Values = new List<int>{0,0,10,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Compraria um bom livro",
-                        Values = new List<int>{0,0,0,10}
-                    }
-                }
-            });
-            cards.Add(new Card
-            {
-                Ask = "Se aparecesse um leão na sua frente",
-                Answers = new List<Answer>()
-                {
-                    new Answer
-                    {
-                        Text = "Abraçaria ele com força",
-                        Values = new List<int>{10,0,0,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Correria como um louco",
-                        Values = new List<int>{0,10,0,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Ainnnnn que fofo",
-                        Values = new List<int>{0,0,10,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Iria procurar outro lugar para ler um livro",
-                        Values = new List<int>{0,0,0,10}
-                    }
-                }
-            });
-            cards.Add(new Card
-            {
-                Ask = "O que você faria com um livro ?",
-                Answers = new List<Answer>()
-                {
-                   new Answer
-                    {
-                        Text = "Montaria uma partida bem engraçada",
-                        Values = new List<int>{10,0,0,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Bom para colocar no pé de uma mesa",
-                        Values = new List<int>{0,10,0,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Tem figuras ?",
-                        Values = new List<int>{0,0,10,0}
-                    },
-                    new Answer
-                    {
-                        Text = "Livros eu amo livros.",
-                        Values = new List<int>{0,0,0,10}
-                    }
-                }
-            });
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
             PageChanger();
         }
-       
-       async void ButtonView_Left(System.Object sender, System.EventArgs e)
+
+        async void ButtonView_Left(System.Object sender, System.EventArgs e)
         {
             if (isBusy)
             {
@@ -135,7 +56,7 @@ namespace quiz.Pages
             {
                 return;
             }
-            if (index == cards.Count-1)
+            if (index == cards.Count-1 || !cards[index].IsAnswered)
             {
                 return;
             }
@@ -158,7 +79,7 @@ namespace quiz.Pages
             {
                 ButtonLeft.Opacity = 1;
             }
-            if (index == cards.Count-1)
+            if (index == cards.Count-1 || !cards[index].IsAnswered)
             {
                 ButtonRight.Opacity = .2;
             }
@@ -171,7 +92,9 @@ namespace quiz.Pages
             AskFrame.Opacity = 0;
             AskFrame.Scale = 0.5;
             NumberBar.Text = index + 1 + "/" + cards.Count;
-         
+
+            //Fb.ScaleXTo(.5, 700, Easing.BounceOut);
+            Fb.WidthRequest = (index + 1)* Tb.Width / cards.Count;
             foreach (var item in cards[index].Answers)
             {
                 var temp = new Views.ButtonView()
@@ -206,6 +129,7 @@ namespace quiz.Pages
             {
                 return;
             }
+            cards[index].IsAnswered = true;
             isBusy = true;
             var i = 0;
             foreach (var item in results)
