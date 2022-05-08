@@ -6,13 +6,10 @@
     xmlns:views="clr-namespace:quiz.Views">
     <ContentPage.Content>
         <Grid StyleClass="Background">
-            <Grid Margin="20,70" RowDefinitions="70,*">
+            <Grid Margin="20,70" RowDefinitions="70,*,Auto">
                 <views:AdMobView />
                 <ScrollView Grid.Row="1">
-                    <FlexLayout
-                        Direction="Column"
-                        JustifyContent="SpaceAround"
-                        VerticalOptions="Center">
+                    <StackLayout Spacing="7" VerticalOptions="Center">
                         <Image
                             x:Name="LogoImage"
                             Margin="20"
@@ -28,13 +25,20 @@
                             FontSize="20"
                             HorizontalTextAlignment="Center"
                             Text="O seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu O seu resultado é muito bom voce venceuO seu resultado é muito bom voce venceu" />
-                        <views:ButtonView
-                            x:Name="BackButton"
-                            Clicked="ButtonView_Clicked"
-                            Text="Voltar" />
-                    </FlexLayout>
-                </ScrollView>
+                        <StackLayout x:Name="allResult" Margin="0,20,0,0" />
+                    </StackLayout>
 
+                </ScrollView>
+                <StackLayout Grid.Row="2">
+                    <views:ButtonView
+                        x:Name="BackButton"
+                        Clicked="ButtonView_Clicked"
+                        Text="Voltar" />
+                    <views:ButtonView
+                        x:Name="ShareButton"
+                        Clicked="ButtonView_Clicked"
+                        Text="Compartilhar" />
+                </StackLayout>
             </Grid>
         </Grid>
     </ContentPage.Content>

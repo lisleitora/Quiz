@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="quiz.Views.ItemResultView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+        <Grid ColumnDefinitions="*,100" HeightRequest="30">
+            <Label
+                x:Name="title"
+                Text="Item"
+                TextColor="Black" />
+
+            <Frame
+                Grid.Column="1"
+                Padding="0"
+                BackgroundColor="Gray"
+                CornerRadius="15"
+                HasShadow="False">
+                <Label
+                    x:Name="value"
+                    HorizontalOptions="Center"
+                    Text="20%"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
